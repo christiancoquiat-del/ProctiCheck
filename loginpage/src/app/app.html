@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" [(ngModel)]="password" placeholder="Enter password">
+    </div>
+
+    <button (click)="validate()">Login</button>
+
+    <p class="message"
+       [class.success]="value === 'Login Successful.'"
+       [class.error]="value === 'Failed to Login'">
+       {{ value }}
+    </p>
+  </div>
+</div>
